@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="developer" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        
+
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/homestyle.css">
+
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!--
+        ===============
+           Main Menu
+        ===============
+        --> 
+
+        <div id="home">
+            <!-- Srart Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <form class="form-inline my-2 my-lg-0">
+                        <%if(!user){%>
+                        <button class="btn btn-outline-warning" onclick="window.location.href = '/auth/login';" type="button">Write a review</button>
+                        <%}else if(user.role != 'admin'){%>
+                        <button class="btn btn-outline-warning" onclick="window.location.href = '/restaurant/nearby';" type="button">Write a review</button>
+                        <%}else{%>
+                        <button class="btn btn-outline-warning" onclick="window.location.href = 'restaurant/add';" type="button">Add resturent</button>
+                        <%}%>
+                    </form>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/reviews"><i class="fa fa-star" aria-hidden="true"></i>Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/restaurants"><i class="fa fa-utensils" aria-hidden="true"></i>Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                            <% if(!user){%>
+                            <button onclick="window.location.href = '/auth/login';" type="button" name="" id="" class="btn btn-underline-custom"><i class="fas fa-sign-in-alt" style="margin-right: 5px;"></i>Log In</button>
+                            <button onclick="window.location.href = '/auth/signup';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-plus" style="margin-right: 5px;"></i>Sign Up</button>
+                            <%}else{%>
+                            <button onclick="window.location.href = '/auth/logout';" type="button" name="" id="" class="btn btn-underline-custom"><i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i>Log out</button>
+                            <button onclick="window.location.href = '/profile';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-alt" style="margin-right: 5px;"></i>Profile</button>
+                            <%}%>
+                    </form>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Start Image Slider -->
+            <div id="carouselExampleIndecators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndecators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndecators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndecators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="background-image: url(assets/images/slider-1.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                    <div class="carousel-item" style="background-image: url(assets/images/slider-2.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                    <div class="carousel-item" style="background-image: url(assets/images/slider-3.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                </div>
+                
+            </div>
+            <!-- End Image Slider -->
+            
+            <!-- Start Search Bar -->
+            <div class="search">
+                <div class="caption">
+                    <p class="small-text-hero">
+                        <i class="fas fa-map-marker-alt text-primary" style="margin-right: 5px;"></i>
+                        Want to find best 
+                        <span class="text-primary">resturants</span> near you?
+                    </p>      
+                    <h1>Let's <span class="text-primary">go    </span> anywhere</h1>   
+                    <p class="text-hero">And uncover the best places to eat, drink and spend time nearest to you.</p>
+                </div>
+                <div class="search-bar">
+                    <form action="/" method="POST">
+                    <div class="row">  
+                        <div class="form-group col-lg-12">
+                            <input type="text" name="lat" id="lat" style="display: none;">
+                            <input type="text" name="long" id="long" style="display: none;">
+                            <input id="search" type="submit" value="Search nearby resturent" class="submit btn btn-outline-warning">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Search Bar -->   
+                   
+            <!-- Start Scroll Down -->
+            <div class="scroll">
+                <div class="home-content-scroll">
+                    <a href="#about" id="rev">
+                    <span>Scroll Down</span>
+                    </a>
+                </div>
+                <div class="home-content-line"></div>
+            </div>
+            <!-- End Scroll Down -->
+
+            <!-- Start Social Links -->
+            <ul class="home-social">
+                <li>
+                    <a href="https://www.facebook.com/momin.sohan/"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/momin.sohan/"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+                </li> 
+            </ul>
+            <!-- End Social Links -->
+
+        </div>
+
+
+        
+
+        
+        <!--
+        ==============
+        * JS Files *
+        ==============
+        -->
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Pooper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Custom js -->
+        <script src="assets/js/script.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= user.username %></title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/homestyle.css">
+    <link href="/assets/css/profile.css" rel="stylesheet">
+
+    <!-- Front Awesome -->
+    <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+
+    
+
+</head>
+<body>
+     <!-- Srart Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(0, 0, 0, 0.8) !important;">
+            <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-warning" onclick="window.location.href = '/restaurant/nearby';" type="button">Write a review</button>
+                </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        <button onclick="window.location.href = '/auth/logout';" type="button" name="" id="" class="btn btn-underline-custom"><i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i>Log out</button>
+                        <button onclick="window.location.href = '/profile';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-alt" style="margin-right: 5px;"></i>Profile</button>
+                </form>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    <!-- PAGE STUFF -->
+
+    <div class="rela-block container">
+        <div class="rela-block profile-card">
+            <div class="profile-pic" id="profile_pic" style="background: url(<%=user.profilePic%>) no-repeat;"></div>
+            <div class="rela-block profile-name-container">
+                <div class="rela-block user-name" id="user_name"><%=user.username%></div>
+            </div>
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th>User Info</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Email</td>
+                    <td><%= user.email %></td>
+                    </tr>
+                    <tr>
+                    <td>Role</td>
+                    <td><%= user.role %></td>
+                    </tr>
+                    <tr>
+                    <td>Provider</td>
+                    <td><%= user.provider %></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th>Comunity Info</th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Member Since</td>
+                        <td><%= user.creationYear %></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+        </div>
+        
+    </div>
+
+
+    
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Pooper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="/assets/js/script.js" async defer></script>
+</body>
+</html>

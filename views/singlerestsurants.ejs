@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/homestyle.css">
+    <link href="/assets/css/profile.css" rel="stylesheet">
+
+    <!-- Front Awesome -->
+    <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+
+    
+
+</head>
+<body>
+     <!-- Srart Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(0, 0, 0, 0.8) !important;">
+            <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <form class="form-inline my-2 my-lg-0">
+                </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        <button onclick="window.location.href = '/auth/logout';" type="button" name="" id="" class="btn btn-underline-custom"><i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i>Log out</button>
+                        <button onclick="window.location.href = '/profile';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-alt" style="margin-right: 5px;"></i>Profile</button>
+                </form>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    <!-- PAGE STUFF -->
+
+    <div class="rela-block container">
+            <div class="card mb-3">
+                <img src="/assets/images/single.PNG" class="card-img-top" alt="...">
+            <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th><%=restaurant.name%></th>
+                        <th></th>
+                        <th>
+                            <span id="11" class="fa fa-star"></span>
+                            <span id="12" class="fa fa-star"></span>
+                            <span id="13" class="fa fa-star"></span>
+                            <span id="14" class="fa fa-star"></span>
+                            <span id="15" class="fa fa-star"></span>
+                        </th>
+                        </tr>
+                    </thead>
+                    <div id="post">
+                        
+                    </div>
+            </table>
+            <table>
+                  <div>
+                        <tr style="margin-left: 15px;">
+                            <th>Comments:</th>
+                            <th>Rating:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea name="" id="txt" cols="35" rows="5" style="margin-left: 15px;"></textarea></td>
+                            <td>
+                                <br>
+                                <span id="1" class="fa fa-star"></span>
+                                <span id="2" class="fa fa-star"></span>
+                                <span id="3" class="fa fa-star"></span>
+                                <span id="4" class="fa fa-star"></span>
+                                <span id="5" class="fa fa-star"></span>
+                                <br>
+                                <br>
+                                <button id="btn" type="button" class="btn btn-outline-warning" style="width: 140px">Submit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                <div></div>
+            </div>
+    </div>
+
+    <p id="id" display='none'><%=restaurant.id%></p>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Pooper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+    <!-- Custom js -->
+    <script src="/assets/js/script.js" async defer></script>
+    <script src="/assets/js/review.js" async defer></script>
+
+</body>
+</html>

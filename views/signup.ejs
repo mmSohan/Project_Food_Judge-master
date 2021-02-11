@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/homestyle.css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Front Awesome -->
+    <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="main">
+         <!-- Srart Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(0, 0, 0, 0.8) !important;">
+                <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-warning" type="button">Write a review</button>
+                    </form>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                            <button onclick="window.location.href = '/auth/login';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-sign-in-alt" style="margin-right: 5px;"></i>Log In</button>
+                    </form>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form action="/auth/signup" method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" value="<%= typeof name != 'undefined' ? name : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" value="<%= typeof pass != 'undefined' ? pass : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" value="<%= typeof re_pass != 'undefined' ? re_pass : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="agree-term" name="agree" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+
+                            
+                            <% if(typeof errors != 'undefined'){ %>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                    <ul>
+                                <% errors.forEach(function(error){ %>
+                                        <li> <%= error.msg %> </li>
+                                <% }); %>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                            <% } %>
+                            <div class="form-group form-button">
+                                <input type="submit"  id="signup" class="form-submit" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="/assets/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="#" onclick="window.location.href = '/auth/login';" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Pooper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="/assets/js/script.js" async defer></script>
+</body>
+</html>

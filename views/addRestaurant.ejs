@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Restaurant</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/homestyle.css">
+    <link href="/assets/css/profile.css" rel="stylesheet">
+
+    <!-- Front Awesome -->
+    <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+
+    
+
+</head>
+<body>
+     <!-- Srart Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(0, 0, 0, 0.8) !important;">
+            <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <form class="form-inline my-2 my-lg-0">
+                </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        <button onclick="window.location.href = '/auth/logout';" type="button" name="" id="" class="btn btn-underline-custom"><i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i>Log out</button>
+                        <button onclick="window.location.href = '/profile';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-alt" style="margin-right: 5px;"></i>Profile</button>
+                </form>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    <!-- PAGE STUFF -->
+
+    <div class="rela-block container">
+            <div class="card mb-3">
+                <img src="/assets/images/cover.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="validationName">Restaurant Name:</label>
+                            <input class="form-control" id="validationName" placeholder="Enter restaurant name" required>
+                            <div class="invalid-feedback">
+                                Restaurant name is required!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="validationAddress">Address:</label>
+                            <textarea class="form-control" id="validationAddress" placeholder="Enter restaurant address" required></textarea>
+                            <div class="invalid-feedback">
+                                Address must be at least 10 characters long!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 col-sm-6">
+                                    <label for="validationLatitude">Latitude:</label>
+                                    <input type="text" class="form-control" id="validationLatitude" placeholder="Enter latitude" required>
+                                    <div class="invalid-feedback">
+                                        Invalid Latitude!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                    <label for="validationLongitude">Longitude:</label>
+                                    <input type="text" class="form-control" id="validationLongitude" placeholder="Enter longitude" required>
+                                    <div class="invalid-feedback">
+                                        Invalid Longitude!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-md-4 col-sm-6">
+                                    <label for="validationOpenTime">Opening Time:</label>
+                                    <input type="time" class="form-control" id="validationOpenTime" required>
+                                    <div class="invalid-feedback">
+                                        Invalid time!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                    <label for="validationCloseTime">Closing Time:</label>
+                                    <input type="time" class="form-control" id="validationCloseTime" required>
+                                    <div class="invalid-feedback">
+                                        Invalid time!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                    <label for="validationContact">Contact No:</label>
+                                    <input class="form-control" id="validationContact" placeholder="+8801#########" required>
+                                    <div class="invalid-feedback">
+                                        Invalid contact no!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="validationURL">Photo:</label>
+                            <input class="form-control" id="validationURL" placeholder="Enter a photo URL" required>
+                            <div class="invalid-feedback">
+                                Invalid URL!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-md-6 col-sm-12">
+                                <input id="submit" type="button" class="btn btn-outline-success btn-block" value="Submit">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <input id="cancle" type="button" class="btn btn-outline-danger btn-block" value="Cancle">
+                            </div>
+                        </div>
+                
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Pooper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+    <!-- Custom js -->
+    <script src="/assets/js/script.js" async defer></script>
+    <script src="/assets/js/addrestaurantscript.js" async defer></script>
+
+</body>
+</html>

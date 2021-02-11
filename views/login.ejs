@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/homestyle.css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Front Awesome -->
+    <script src="https://kit.fontawesome.com/44fef32f13.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="main">
+        <!-- Srart Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(0, 0, 0, 0.8) !important;">
+                <a class="navbar-brand" href="/">Food Judge<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-warning" type="button">Write a review</button>
+                    </form>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                            <button onclick="window.location.href = '/auth/signup';" type="button" name="" id="" class="btn btn-outline-custom"><i class="fas fa-user-plus" style="margin-right: 5px;"></i>Sign Up</button>
+                    </form>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="/assets/images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="#" onclick="window.location.href = '/auth/signup';"  class="signup-image-link">Create an account</a>
+                    </div>
+                    
+                    <div class="signin-form">
+                        <h2 class="form-title">Log in</h2>
+                        <% if(success_msg != ''){ %>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                              <%= success_msg %>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                        <% } %>
+                        <% if(error != ''){ %>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                              <%= error %>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                         <% } %>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="email" id="your_name" placeholder="Your email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="/auth/google"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- Pooper.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <!-- Bootstrap -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!-- Custom js -->
+     <script src="/assets/js/script.js" async defer></script>
+
+</body>
+</html>
